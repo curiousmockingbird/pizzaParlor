@@ -66,6 +66,12 @@ function handleFormSubmission(event) {
   // Set total price
   const totalPrice = pizza.setTotalPrice();
 
+  // Unhide order details
+  document.getElementById("hiddenDiv").removeAttribute("class","hidden")
+  // Place amount of toppings in order details
+  document.getElementById("amount-of-toppings").innerHTML = checkedToppings.length;
+  // Place pizza size in order details
+  document.getElementById("size-of-pizza").innerHTML = sizeSelection.toLowerCase();
 
   console.log(pizza,toppingPrice,sizePrice,totalPrice);
 }
