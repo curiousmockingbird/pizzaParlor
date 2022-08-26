@@ -9,7 +9,7 @@ Pizza.prototype.setPizzaProperties = function(toppings,size) {
   this.size = [size];
 };
 
-Pizza.prototype.setPrice = function() {
+Pizza.prototype.setToppingPrice = function() {
   if (this.toppings.includes(1)) {
     return "$10.00";
   } else if (this.toppings.includes(2)) {

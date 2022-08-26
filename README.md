@@ -13,9 +13,13 @@ Code: Pizza.prototype.setPizzaProperties(topping,size);
 Expected Output: Pizza { toppings: [topping], size: [size]}
 
 Test: "It should return a price string if the toppings property value is 1."
-Code: Pizza.prototype.setPrice();
+Code: Pizza.prototype.setToppingPrice();
 Expected Output: "$10.00"
 
 Test: "It should return different price strings if the toppings property value is 2, 3 or 4."
-Code: Pizza.prototype.setPrice();
+Code: Pizza.prototype.setToppingPrice();
 Expected Output: Price string in relation to the topping property value
+
+Test: "It should return different price strings in relation to the size for the pizza."
+Code: Pizza.prototype.setSizePrice();
+Expected Output: Price string in relation to the size for the pizza
