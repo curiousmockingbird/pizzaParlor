@@ -20,7 +20,7 @@
         <form>
           <div class="form-group margin-top">
             <h6>Select a topping for your pizza!</h6>
-            <input type="checkbox" name="select-topping" value="1"> 
+            <input type="checkbox" name="select-topping" value="1" checked> 
             <label for="select-topping">
               Mushroom
             </label><br>
@@ -38,7 +38,7 @@
             </label><br>
 
             <h6 class="margin-top">Select a size for your pizza!</h6>
-            <input type="radio" name="select-size" value="Small"> 
+            <input type="radio" name="select-size" value="Small" checked> 
             <label for="select-topping">
               Small
             </label><br>
@@ -56,13 +56,13 @@
         </form>
       </div>
       <div class="col-12 hidden margin-top" id="hiddenDiv">
-        <h3>Here's your order:<br><span class="small"></span></h3>
+        <h3 class="margin-top">Here's your order:<br><span class="small"></span></h3>
 
-        <p> You have selected <span id="amount-of-toppings"></span> topping/s<br>
-        and a <span id="size-of-pizza"></span> sized pizza.<br><br>
-        Amount of toppings......subtotal: <span id="price-per-topping"></span><br>
-        Size......subtotal: <span id="price-per-size"></span><br>
-        </p>
+        <p> You have selected <span id="amount-of-toppings"></span> topping/s</p>
+        <p>and a <span id="pizzaSize"></span> sized pizza.</p><br><br>
+        <p>Price per amount of toppings......: <span id="price-per-topping"></span></p><br>
+        <p>Price per size......: <span id="price-per-size"></span></p><br>
+        <p>Total price......: <span id="totalPrice"></span></p><br>
       </div>
 
     </div>

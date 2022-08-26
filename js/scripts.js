@@ -16,8 +16,10 @@ Pizza.prototype.setToppingPrice = function () {
     return 15;
   } else if (this.toppings.includes(3)) {
     return 20;
-  } else {
+  } else if (this.toppings.includes(4)) {
     return 25;
+  } else {
+    return 0;
   }
 };
 
@@ -46,6 +48,7 @@ function handleFormSubmission(event) {
   let toppingSelection = document.querySelectorAll("input[name='select-topping']");
   // Get the value from the radio buttons
   let sizeSelection = document.querySelector("input[name='select-size']:checked").value;
+
   // Return an array. The array's length determines the amount of checkboxes/toppings selected
   let checkedToppings = [];
   toppingSelection.forEach(item => {
@@ -60,24 +63,33 @@ function handleFormSubmission(event) {
   // Store the values for topping and size
   pizza.setPizzaProperties(checkedToppings.length, sizeSelection);
   // Set the price for the topping 
-  const toppingPrice = pizza.setToppingPrice();
+  let toppingPrice = pizza.setToppingPrice();
   // Set the price for the size
-  const sizePrice = pizza.setSizePrice();
+  let sizePrice = pizza.setSizePrice();
   // Set total price
-  const totalPrice = pizza.setTotalPrice();
+  let totalPrice = pizza.setTotalPrice();
 
   // Unhide order details
   document.getElementById("hiddenDiv").removeAttribute("class","hidden")
   // Place amount of toppings in order details
   document.getElementById("amount-of-toppings").innerHTML = checkedToppings.length;
   // Place pizza size in order details
-  document.getElementById("size-of-pizza").innerHTML = sizeSelection.toLowerCase();
+  document.getElementById("pizzaSize").innerHTML = sizeSelection.toLowerCase();
+  // Place subtotal per amount of toppings in order details
+  document.getElementById("price-per-topping").innerHTML = toppingPrice;
+  // Place subtotal per size in order details
+  document.getElementById("price-per-size").innerHTML = sizePrice;
+  // Place total price in order details
+  document.getElementById("totalPrice").innerHTML = totalPrice;
+}
 
-  console.log(pizza,toppingPrice,sizePrice,totalPrice);
+function resetForm() {
+  document.querySelector("form").reset();
 }
 
 window.addEventListener("load", function () {
   let form = document.querySelector("form");
   form.addEventListener("submit", handleFormSubmission);
+  form.addEventListener("submit", resetForm);
 })
 
