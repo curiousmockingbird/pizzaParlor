@@ -11,3 +11,7 @@ Expected Output: Pizza { toppings: [], size: []}
 Test: "It should populate the values for the toppings and size properties."
 Code: Pizza.prototype.setPizzaProperties(topping,size);
 Expected Output: Pizza { toppings: [topping], size: [size]}
+
+Test: "It should return a price string if the toppings property value is 1."
+Code: Pizza.prototype.setPrice();
+Expected Output: "$10.00"
