@@ -28,3 +28,33 @@ Test: "It should return the addition of the values of the toppings and the size 
 Code: Pizza.prototype.setTotalPrice();
 Expected Output: Price value in relation to the topping and size selection
 
+### Application name:
+Pizza Parlor.
+
+### Names of contributors
+Harold Mesa. 
+
+### Description:
+A simple application to get the price for a pizza depending on the selection of the user.
+
+### Link to site on GitHub Pages:
+Please [click here](https://curiousmockingbird.github.io/pizzaParlor/)
+
+### Technologies used:
+HTML, CSS, Bootstrap and JavaScript.
+
+### Application setup instructions:
+1. Clone this repository to your desktop.
+2. Navigate to the top level of the directory.
+3. Open index.html in your browser.
+4. Select a topping and a size for the pizza.
+   
+
+### Known bugs
+The branching for the program works well.  
+
+### License
+(MIT) https://en.wikipedia.org/wiki/MIT_License
+
+
+Copyright (c) _Aug 26, 2022_ _Harold Mesa_
