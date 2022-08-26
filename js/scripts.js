@@ -4,9 +4,9 @@ function Pizza(toppings,size) {
   this.size = size;
 }
 
-Pizza.prototype.setPizzaProperties = function() {
-  this.toppings = [];
-  this.size = [];
+Pizza.prototype.setPizzaProperties = function(toppings,size) {
+  this.toppings = [toppings];
+  this.size = [size];
 };
 
 
