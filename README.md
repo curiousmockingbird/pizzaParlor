@@ -23,3 +23,8 @@ Expected Output: Price value in relation to the topping property value
 Test: "It should return different price values in relation to the size for the pizza."
 Code: Pizza.prototype.setSizePrice();
 Expected Output: Price value in relation to the size for the pizza
+
+Test: "It should return the addition of the values of the toppings and the size as the total price for the pizza."
+Code: Pizza.prototype.setTotalPrice();
+Expected Output: Price value in relation to the topping and size selection
+
