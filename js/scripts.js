@@ -1,5 +1,8 @@
-// Bussiness Logic for Pizza ------------
+// Business Logic for Pizza ------------
 function Pizza(toppings,size) {
   this.toppings = toppings;
   this.size = size;
 }
+
+
+
