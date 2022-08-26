@@ -31,7 +31,9 @@ Pizza.prototype.setSizePrice = function() {
   } 
 };
 
-
+Pizza.prototype.setTotalPrice = function() {
+  return this.setToppingPrice() + this.setSizePrice();
+};
 
 
 
