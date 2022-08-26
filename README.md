@@ -12,14 +12,14 @@ Test: "It should populate the values for the toppings and size properties."
 Code: Pizza.prototype.setPizzaProperties(topping,size);
 Expected Output: Pizza { toppings: [topping], size: [size]}
 
-Test: "It should return a price string if the toppings property value is 1."
+Test: "It should return a price value if the toppings property value is 1."
 Code: Pizza.prototype.setToppingPrice();
-Expected Output: "$10.00"
+Expected Output: 10
 
-Test: "It should return different price strings if the toppings property value is 2, 3 or 4."
+Test: "It should return different price values if the toppings property value is 2, 3 or 4."
 Code: Pizza.prototype.setToppingPrice();
-Expected Output: Price string in relation to the topping property value
+Expected Output: Price value in relation to the topping property value
 
-Test: "It should return different price strings in relation to the size for the pizza."
+Test: "It should return different price values in relation to the size for the pizza."
 Code: Pizza.prototype.setSizePrice();
-Expected Output: Price string in relation to the size for the pizza
+Expected Output: Price value in relation to the size for the pizza
