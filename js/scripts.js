@@ -42,9 +42,21 @@ function handleFormSubmission(event) {
   console.log("Test");
 
   let pizza = new Pizza();
-  let toppingSelection = document.querySelector("input[name='select-topping']:checked").value;
+  let toppingSelection = document.querySelectorAll("input[name='select-topping']");
 
-  console.log(toppingSelection);
+  let checkedToppings = [];
+  toppingSelection.forEach(item => {
+    if (item.checked) {
+      let data = {
+        item: parseInt(item.value),
+      }
+      checkedToppings.push(data);
+    }
+  })
+
+  pizza.setPizzaProperties(checkedToppings.length,"Medium");
+
+  console.log(pizza);
 }
 
 window.addEventListener("load", function () {
